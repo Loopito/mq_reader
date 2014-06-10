@@ -1,0 +1,6 @@
+*.gem
+Gemfile.lock
+doc/
+rdoc
+.ruby-version
+.ruby-gemset
