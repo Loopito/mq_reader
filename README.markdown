@@ -10,7 +10,6 @@ It's meant to be simple and easy to use.
   <li><a href="#overview">Overview</a></li>
   <li><a href="#installation">Installation</a></li>
   <li><a href="#usage">Usage</a>
-  <li><a href="#credits">Credits</a></li>
   <li><a href="#contributing">Contributing</a></li>
 </ul>
 
@@ -25,8 +24,11 @@ It's meant to be as simple as possible. For those cases when you just want to ge
 <a name="installation">
 ## Installation
 
-Add 'mq_reader to your Gemfile', then 'bundle'
-Starting from a clean commit status, add `authority` to your Gemfile, then `bundle`.
+Add 'mq_reader' to your Gemfile, then 'bundle'
+
+```ruby
+gem 'mq_reader'
+```
 
 <a name="usage">
 ## Usage
@@ -59,7 +61,24 @@ geocode.lng
   #=> -56.15989
 ```
 
+MQReader generates accesor methods for everything that comes with the response.
 You can check the MapQuest api to see what other values come with the response.
+Lets say you want the value of geocodeQualityCode.
+You just do:
+
+```ruby
+geocode.geocode_quality_code
+  #=> "P1XXX"
+```
+
+...and when in the future the response geocoded address comes with a aNewThingResponded attribute.
+The accesor will already be generated. You can do:
+
+```ruby
+geocode.a_new_thing_responded
+  #=> value of aNewThingResponded attribute in the response.
+```
+
 
 You can also add more params to the geocode request with an options hash:
 
@@ -70,5 +89,6 @@ geocode = MQReader.geocode_address("2710 Avenida 8 de Octubre, Montevideo, Urugu
 Params can be written in ruby sintax(snake case).
 
 <a name="contributing">
+## Contributing
 
-Feel free to contribute!
+Feel free to contribute or make suggestions!
