@@ -20,7 +20,7 @@ It's meant to be simple and easy to use.
 Using MQReader, you can:
 
 Easily Geocode addresses using the MapQuest open geocoding api.
-It's meant to be as simple as possible. For those cases when you just want to geocode a address.
+It's meant to be as simple as possible. For those cases when you just want to geocode an address.
 
 <a name="installation">
 ## Installation
